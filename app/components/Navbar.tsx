@@ -28,12 +28,14 @@ const navMenu = [
 export default function Navbar() {
   return (
     <div className="flex-col flex max-w-[1300px] mx-auto font-couture">
-      <div className="bg-white flex justify-between pt-8 ">
+      <div className="bg-white flex justify-between pt-8">
         <div className=""></div>
         <div>
-          <h1 className="font-couture tracking-widest text-4xl">CHANEL</h1>
+          <h1 className="font-couture tracking-widest text-4xl w-full pl-40">
+            CHANEL
+          </h1>
         </div>
-        <div className="space-x-4 items-center inline-flex">
+        <div className="gap-x-4 items-center inline-flex">
           {iconLinks.map((item, index) => (
             <div key={index}>
               <Link href={item.link} className=" text-xl">
@@ -43,9 +45,9 @@ export default function Navbar() {
           ))}
         </div>
       </div>
-      <div className="flex justify-between pt-8 text-sm font-light">
+      <div className="flex justify-between pt-8 text-sm font-light pb-4">
         {navMenu.map((item, index) => (
-          <div>
+          <div key={index}>
             <Link href={item.link}>{item.name}</Link>
           </div>
         ))}
