@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
+import Navbar from "./components/Navbar";
 
 const couture = localFont({
-  src: "./public/fonts/couture-bld.woff",
+  src: "../public/fonts/couture-bld.woff",
   variable: "--font-couture",
   weight: "400",
   style: "normal",
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body
         className={`${couture.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar />
         {children}
       </body>
     </html>
